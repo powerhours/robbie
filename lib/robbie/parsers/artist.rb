@@ -5,7 +5,7 @@ module Robbie
         def find(artist_id)
           response = query("/data/v1/name/info", {
             nameid: artist_id,
-            include: "discography",
+            include: "discography,images",
             type: "main"
           })
           parse(response["name"])
